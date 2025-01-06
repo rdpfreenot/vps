@@ -73,7 +73,13 @@ tmux kill-session -t Hujan
 
 Untuk memulai live streaming di YouTube, gunakan perintah berikut:
 ```bash
-ffmpeg -stream_loop -1 -re -i /root/live.mp4 -f flv -c:v copy -c:a copy rtmp://a.rtmp.youtube.com/live2/your_StreamKey
+script: ffmpeg -stream_loop -1 -re -i /root/live.mp4 -f flv -c:v copy -c:a copy rtmp://a.rtmp.youtube.com/live2/your_StreamKey
+script2: ffmpeg -stream_loop -1 -re -i /root/live.mp4 \
+-vf "scale=854:480" \
+-c:v libx264 -preset veryfast -b:v 800k \
+-c:a aac -b:a 128k -ar 44100 \
+-f flv rtmp://a.rtmp.youtube.com/live2/your_StreamKey
+
 ```
 
 ### Penjelasan:
