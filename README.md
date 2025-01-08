@@ -82,6 +82,7 @@ script2: ffmpeg -stream_loop -1 -re -i /root/live.mp4 \
 
 SCRIPT3: ffmpeg -stream_loop -1 -re -i /root/live.mp4 -vf scale=1280:720 -c:v libx264 -preset veryfast -b:v 2900k -c:a aac -b:a 128k -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/jmuk-7cgz-r3zz-j2jj-8cfz
 SCRIPT4 LIVE2 : ffmpeg -stream_loop -1 -re -i /root/live1.mp4 -vf scale=1280:720 -c:v libx264 -preset veryfast -b:v 1400k -c:a aac -b:a 128k -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/jmuk-7cgz-r3zz-j2jj-8cfz
+SCRIPT5 LIVE2 480P : ffmpeg -stream_loop -1 -re -i /root/live1.mp4 -vf scale=854:480 -c:v libx264 -preset veryfast -b:v 800k -c:a aac -b:a 128k -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/jmuk-7cgz-r3zz-j2jj-8cfz
 
 
 ```
