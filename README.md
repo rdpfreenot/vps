@@ -80,6 +80,8 @@ script2: ffmpeg -stream_loop -1 -re -i /root/live.mp4 \
 -c:a aac -b:a 128k -ar 44100 \
 -f flv rtmp://a.rtmp.youtube.com/live2/your_StreamKey
 
+SCRIPT3: ffmpeg -stream_loop -1 -re -i /root/live.mp4 -vf scale=1280:720 -c:v libx264 -preset veryfast -b:v 2900k -c:a aac -b:a 128k -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/jmuk-7cgz-r3zz-j2jj-8cfz
+
 ```
 
 ### Penjelasan:
